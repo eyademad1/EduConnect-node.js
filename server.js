@@ -13,6 +13,7 @@ const quizAttemptRoutes = require('./routes/quizAttemptRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
 const enrollmentRoutes = require('./routes/enrollmentRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
 
 // Create Express app
 const app = express();
@@ -59,6 +60,7 @@ app.use('/api/quizAttempts', quizAttemptRoutes);
 app.use('/api/chats', chatRoutes);
 app.use('/api/files', uploadRoutes);
 app.use('/api/enrollments', enrollmentRoutes);
+app.use('/api/payments', paymentRoutes);
 
 // Socket.io for real-time chat
 require('./socket')(io);
